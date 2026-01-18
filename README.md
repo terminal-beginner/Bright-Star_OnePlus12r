@@ -1,6 +1,10 @@
-![Banner](svgs/emberheart_light.svg#gh-light-mode-only)
-![Banner](svgs/emberheart_dark.svg#gh-dark-mode-only)
+<p align="center">
+  <img src="assets/heart.png" height="40" style="vertical-align:middle; margin-right:10px;" />
+  <img src="assets/banner.svg" height="40" style="vertical-align:middle;" />
+</p>
+
 ----
+
 ![ci-status](https://raw.githubusercontent.com/nullptr-t-oss/EmberHeart_OnePlus11/refs/heads/badges/ci.svg)
 
 -----
