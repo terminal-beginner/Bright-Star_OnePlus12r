@@ -1,26 +1,21 @@
-# [Org repo maintained by @fatalcoder524](https://github.com/EmberHeart-Kernels/EmberHeart_OnePlus11)
-
 ![Banner](svgs/emberheart_light.svg#gh-light-mode-only)
 ![Banner](svgs/emberheart_dark.svg#gh-dark-mode-only)
-
----
-[Guide to fix Unusually long boot times on A16 when using Nethunter](/a16_fix.md)
----
-
+----
 ![ci-status](https://raw.githubusercontent.com/nullptr-t-oss/EmberHeart_OnePlus11/refs/heads/badges/ci.svg)
 
----
+-----
 
-### Your warranty is no longer valid!
+## Your warranty is no longer valid!
 
 I am not responsible for bricked devices, dead SD cards, thermonuclear war, or the current economic crisis. Please do some research if you have any concerns about features included in this kernel before flashing it! YOU are choosing to make these modifications, and if you point your finger at me for messing up your device, I will laugh at you.
 
----
+----
 
-## Other Links:
+# [Link to Org repo maintained by @fatalcoder524](https://github.com/EmberHeart-Kernels/EmberHeart_OnePlus11)
 
-[Kernel Flasher - fatalcoder524 fork](https://github.com/fatalcoder524/KernelFlasher)
----
+## [Guide to fix Unusually long boot times on A16 when using Nethunter](/a16_fix.md)
+
+## Other Links: [Kernel Flasher - fatalcoder524 fork](https://github.com/fatalcoder524/KernelFlasher)
 
 ## Installation instructions: 
 
@@ -28,7 +23,7 @@ I am not responsible for bricked devices, dead SD cards, thermonuclear war, or t
 - Flash Wireless Firmware for Nethunter provided in the releases 
 - Download and Unzip kernel modules in internal storage and load them using `insmod module_name.ko`
 
----
+----
 
 ## Loading rtw88 drivers
 
@@ -49,14 +44,14 @@ If you have unzipped all the drivers in internal storage and want to load driver
 
 Tested wifi adaptors : [TP-Link Archer T2U Plus](https://amzn.in/d/76Ka5nB)
 
----
+----
 
 ## Features
 
 - **KernelSU**: KernelSU is a root solution for Android GKI devices, it works in kernel mode and grants root permission to userspace applications directly in kernel space.
 - **SUSFS**: An addon root hiding kernel patches and userspace module for KernelSU.
 - **Nethunter**: Open-source Android penetration testing platform for Android devices,
----
+----
 
 ## Credits
 
@@ -70,13 +65,13 @@ Tested wifi adaptors : [TP-Link Archer T2U Plus](https://amzn.in/d/76Ka5nB)
 
 Special thanks to the open-source community for their contributions!
 
----
+----
 
 ## Support
 
 If you encounter any issues or need help, feel free to open an issue in this repository or reach out to me.
 
----
+----
 
 ## Disclaimer
 
