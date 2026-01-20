@@ -1,4 +1,4 @@
-name: Build OnePlus 11 EmberHeart Kernel
+name: Build OnePlus 12r Bright-Star Kernel
 
 permissions:
   contents: write
@@ -24,7 +24,7 @@ inputs:
   kernel_uname:
     required: false
     type: string
-    default: "EmberHeart"
+    default: "Bright-Star"
   manifest:
     required: true
     type: string
@@ -216,7 +216,7 @@ runs:
         set -euo pipefail
         echo "::group::Set build user/host"
 
-        BUILD_USER="EmberHeart"
+        BUILD_USER="Bright-Star"
         BUILD_HOST="OnePlus"
 
         echo "KBUILD_BUILD_USER=$BUILD_USER" >> "$GITHUB_ENV"
@@ -912,7 +912,7 @@ runs:
         cp "$IMAGE_PATH" "$GITHUB_WORKSPACE/AnyKernel3/Image"
         cd "$GITHUB_WORKSPACE/AnyKernel3"
 
-        sed -i '7 c\kernel.string=EmberHeart Kernel by nullptr-t-oss' anykernel.sh
+        sed -i '7 c\kernel.string=Bright-Star Kernel by nullptr-t-oss' anykernel.sh
         curl https://raw.githubusercontent.com/nullptr-t-oss/kernel_patches/refs/heads/main/banner > banner
 
         ZIP_NAME="AnyKernel3_${OP_MODEL}_${{ env.KERNEL_FULL_VER }}_Next_${KSUVER}_SuSFS_${SUSVER}.zip"
@@ -943,7 +943,7 @@ runs:
         cd "$GITHUB_WORKSPACE"
         mkdir -p boot
         # Download stock boot image
-        wget https://github.com/nullptr-t-oss/EmberHeart_OnePlus11/raw/refs/heads/main/tools/boot.zip
+        wget https://github.com/nullptr-t-oss/Bright-Star_OnePlus12r/raw/refs/heads/main/tools/boot.zip
         unzip boot.zip
         # Download magiskboot binary
         wget https://github.com/magojohnji/magiskboot-linux/raw/refs/heads/main/x86_64/magiskboot
@@ -960,8 +960,8 @@ runs:
         echo -n "Repacking boot image..."
         $MAGISKBOOT repack $BOOT
 
-        mv -f new-boot.img EmberHeart_boot.img
-        cp EmberHeart_boot.img "$CONFIG_DIR/artifacts/"
+        mv -f new-boot.img Bright-Star_boot.img
+        cp Bright-Star_boot.img "$CONFIG_DIR/artifacts/"
 
         echo "Boot image created ✅"
         echo "::endgroup::"
@@ -1018,4 +1018,4 @@ runs:
       with:
         name: kernel-${{ env.CONFIG }}
         path: ${{ env.CONFIG }}/artifacts/
-
+        
