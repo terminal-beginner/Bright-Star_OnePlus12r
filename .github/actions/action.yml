@@ -912,7 +912,7 @@ runs:
         cp "$IMAGE_PATH" "$GITHUB_WORKSPACE/AnyKernel3/Image"
         cd "$GITHUB_WORKSPACE/AnyKernel3"
 
-        sed -i '7 c\kernel.string=Bright-Star Kernel by nullptr-t-oss' anykernel.sh
+        sed -i '7 c\kernel.string=Bright-Star Kernel by terminal-beginner' anykernel.sh
         curl https://raw.githubusercontent.com/nullptr-t-oss/kernel_patches/refs/heads/main/banner > banner
 
         ZIP_NAME="AnyKernel3_${OP_MODEL}_${{ env.KERNEL_FULL_VER }}_Next_${KSUVER}_SuSFS_${SUSVER}.zip"
