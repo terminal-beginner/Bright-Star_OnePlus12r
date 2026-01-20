@@ -1,4 +1,4 @@
-name: Build and Release OnePlus 11 EmberHeart Kernel and Kernel Modules
+name: Build and Release OnePlus 12r Bright-Star Kernel and Kernel Modules
 
 permissions:
   contents: write
@@ -40,7 +40,7 @@ on:
       kernel_uname:
         description: 'Kernel uname'
         type: string
-        default: 'EmberHeart'
+        default: 'Bright-Star'
       susfs_branch_or_commit:
         description: 'Enter SusFS Branch or commit hash for android13-5.15'
         type: string
@@ -88,7 +88,7 @@ jobs:
           done
           echo "]" >> matrix.json
         
-          input="OP11"
+          input="OP12r"
           jq_filter="."
           jq_filter="map(select(.model == \"$input\"))"
         
@@ -100,7 +100,7 @@ jobs:
           echo "MATRIX_EOF" >> "$GITHUB_OUTPUT"
 
   build-kernel:
-    name: Build OP11 EmberHeart kernel
+    name: Build OP12r Bright-Star kernel
     needs: set-op-model
     runs-on: ubuntu-latest
     env:
@@ -161,7 +161,7 @@ jobs:
       REPO_OWNER: ${{ github.repository_owner }}
       REPO_NAME: ${{ github.event.repository.name }}
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      RELEASE_NAME: 'OnePlus 11 EmberHeart Kernel With KernelSU Next, Nethunter & SUSFS v2.0.0'
+      RELEASE_NAME: 'OnePlus 12r Bright-Star Kernel With KernelSU Next, Nethunter & SUSFS v2.0.0'
       OS_VERSION: $(grep -oi 'oos[0-9]\+' <<< "${{ inputs.manifest }}")
     steps:
       - name: Checkout code
