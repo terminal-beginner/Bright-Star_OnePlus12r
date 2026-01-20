@@ -590,6 +590,7 @@ runs:
         CONFIG_BT_HCIBCM203X=y
         CONFIG_BT_HCIBPA10X=y
         CONFIG_BT_HCIBFUSB=y
+        CONFIG_BT_HCIUSER=y
 
         CONFIG_USB_AIRSPY=y
         CONFIG_USB_HACKRF=y
