@@ -581,6 +581,7 @@ runs:
         echo "::group::Applying Nethunter configs..."
         cd "$CONFIG/kernel_platform"
         cat >> common/arch/arm64/configs/gki_defconfig <<EOF
+        CONFIG_BT_VHCI=y
         CONFIG_BT_HCIBTUSB=y
         CONFIG_BT_HCIBTUSB_BCM=y
         CONFIG_BT_HCIBTUSB_RTL=y
