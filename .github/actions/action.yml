@@ -28,7 +28,7 @@ inputs:
   manifest:
     required: true
     type: string
-    default: OOS16
+    default: OOS15
 
 outputs:
   kernel_version:
